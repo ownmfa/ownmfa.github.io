@@ -1,0 +1,262 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #10316b;
+}
+
+.navbar-inner,
+.footer-container {
+  margin: 0 5%;
+}
+
+.navbar-inner .logo {
+  padding: 15px 20px 10px;
+}
+
+.navbar ul {
+  float: right;
+  list-style-type: none;
+  margin: 10px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a,
+.navbar li span {
+  display: block;
+  color: gainsboro;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  color: white;
+}
+
+.content {
+  width: 1150px;
+  margin: 94px auto 0;
+}
+
+.lead-inner {
+  text-align: center;
+  color: #10316b;
+  margin: 0 10%;
+  padding: 5px 0;
+}
+
+.demo {
+  height: 575px;
+  background-image: url("/assets/img/auth_phone_hand.jpg");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+
+.demo-left {
+  width: 630px;
+}
+
+.demo-left h3 {
+  text-align: center;
+  /* Restore when removing beta request link */
+  /* padding: 20px; */
+  padding: 5px;
+}
+
+.code-demo {
+  margin: 20px 0 30px;
+  background-color: #333333;
+  color: white;
+  border-radius: 7px;
+}
+
+.code-example {
+  padding: 50px 25px;
+  font-size: 1.1em;
+}
+
+.request-beta {
+  text-align: center;
+}
+
+.request-beta a {
+  display: inline-block;
+  background-color: #fdbe34;
+  color: black;
+  font-size: 1.2em;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 25px gray;
+  transition: all 0.3s;
+}
+
+.request-beta a:hover {
+  box-shadow: 5px 5px 25px #404040;
+}
+
+.features,
+.benefits,
+.pricing,
+.methods,
+.contact {
+  padding: 80px 0 0;
+}
+
+.section h1 {
+  text-align: center;
+  color: #10316b;
+  padding-bottom: 20px;
+}
+
+.features-list,
+.methods-list,
+.benefits-list,
+.about-container {
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+}
+
+.features-list img,
+.methods-list img,
+.benefits-list img,
+.about-container img {
+  padding: 20px;
+}
+
+.promo-list {
+  font-size: 1.1em;
+}
+
+.promo-list li {
+  color: #10316b;
+  margin-bottom: 15px;
+}
+
+.promo-list li span {
+  color: black;
+}
+
+.pricing-table table {
+  table-layout: fixed;
+}
+
+table {
+  width: 100%;
+  border: 0;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid silver;
+  font-size: 1.1em;
+  max-width: 400px;
+  min-width: 150px;
+}
+
+th,
+td {
+  padding: 12px;
+}
+
+.thd-noborder {
+  border: none;
+}
+
+.td-free {
+  color: #10316b;
+  font-size: 1.2em;
+  text-transform: uppercase;
+}
+
+.td-pro {
+  color: green;
+  font-size: 1.3em;
+}
+
+.td-center {
+  text-align: center;
+}
+
+.td-black a {
+  color: black;
+}
+
+.td-green {
+  color: green;
+  font-size: 1.75em;
+}
+
+.pricing-sub {
+  color: red;
+  font-size: 0.65em;
+}
+
+.pricing,
+.benefits,
+.contact,
+.privacy,
+.terms,
+.pricing-pricing {
+  padding-bottom: 80px;
+}
+
+.contact-container {
+  text-align: center;
+  background-color: whitesmoke;
+  padding: 20px 0;
+}
+
+.faq {
+  margin: 0 10%;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+footer {
+  background-color: #10316b;
+}
+
+.footer-container {
+  padding: 20px 0;
+  color: gainsboro;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.policies ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.policies li {
+  float: left;
+}
+
+.policies li a {
+  display: block;
+  color: gainsboro;
+  text-align: center;
+  padding: 14px 14px;
+  text-decoration: none;
+}
+
+.policies li a:hover {
+  color: white;
+}
