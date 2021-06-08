@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
@@ -31,8 +35,7 @@ body {
   float: left;
 }
 
-.navbar li a,
-.navbar li span {
+.navbar li a {
   display: block;
   color: gainsboro;
   text-align: center;
@@ -69,24 +72,32 @@ body {
 
 .demo-left h3 {
   text-align: center;
-  /* Restore when removing beta request link */
-  /* padding: 20px; */
   padding: 5px;
 }
 
 .code-demo {
-  margin: 20px 0 30px;
   background-color: #333333;
   color: white;
   border-radius: 7px;
 }
 
 .code-example {
-  padding: 50px 25px;
+  padding: 30px 25px;
   font-size: 1.1em;
 }
 
+.code-param {
+  color: limegreen;
+}
+
+.code-url,
+.code-url a {
+  color: #fdbe34;
+  text-decoration: none;
+}
+
 .request-beta {
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -120,6 +131,16 @@ body {
   padding-bottom: 20px;
 }
 
+.section img {
+  width: 300px;
+  padding: 30px;
+}
+
+.about-container img {
+  width: 400px;
+  padding: 20px;
+}
+
 .features-list,
 .methods-list,
 .benefits-list,
@@ -127,13 +148,6 @@ body {
   background-color: whitesmoke;
   display: flex;
   align-items: center;
-}
-
-.features-list img,
-.methods-list img,
-.benefits-list img,
-.about-container img {
-  padding: 20px;
 }
 
 .promo-list {
@@ -147,6 +161,63 @@ body {
 
 .promo-list li span {
   color: black;
+}
+
+.pricing-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-container h3 {
+  margin: 10px 0;
+}
+
+.pricing-left {
+  background-color: whitesmoke;
+  padding: 35px 20px;
+  width: 200px;
+}
+
+.pricing-starter {
+  color: #10316b;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin: 15px;
+}
+
+.pricing-right {
+  border: 1px solid silver;
+  padding: 35px 20px;
+  width: 200px;
+}
+
+.pricing-pro {
+  color: green;
+  font-size: 3em;
+  font-weight: 500;
+  margin: 0 0 10px;
+}
+
+.pricing-details {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.pricing-details a {
+  display: inline-block;
+  background-color: green;
+  color: ghostwhite;
+  font-size: 1.2em;
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 20px;
+  box-shadow: 5px 5px 25px gray;
+  transition: all 0.3s;
+}
+
+.pricing-details a:hover {
+  box-shadow: 5px 5px 25px #404040;
 }
 
 .pricing-table table {
@@ -163,8 +234,8 @@ th,
 td {
   border: 1px solid silver;
   font-size: 1.1em;
-  max-width: 400px;
-  min-width: 150px;
+  max-width: 375px;
+  min-width: 155px;
 }
 
 th,
@@ -185,6 +256,7 @@ td {
 .td-pro {
   color: green;
   font-size: 1.3em;
+  font-weight: 450;
 }
 
 .td-center {
@@ -206,7 +278,6 @@ td {
 }
 
 .pricing,
-.benefits,
 .contact,
 .privacy,
 .terms,
@@ -223,6 +294,7 @@ td {
 .faq {
   margin: 0 10%;
   text-align: center;
+  font-size: 1.1em;
   padding-bottom: 30px;
 }
 
