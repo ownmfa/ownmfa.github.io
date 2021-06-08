@@ -17,15 +17,14 @@
   <body>
     <div class="navbar">
       <div class="navbar-inner">
-        <a href="/">
+        <a href="/#">
           <img class="logo" src="/assets/img/ownmfa.png" alt="OwnMFA" />
         </a>
 
         <ul class="nav">
-          <li><a href="/">Overview</a></li>
-          <li><a href="/features">Features</a></li>
+          <li><a href="/#product">Product</a></li>
           <li><a href="/pricing">Pricing</a></li>
-          <li><span>Support</span></li>
+          <li><a href="https://api.ownmfa.com">Docs</a></li>
           <li><a href="https://ownmfa.freshstatus.io/">Status</a></li>
           <li><a href="/about">About Us</a></li>
           <li>
@@ -58,24 +57,24 @@
               two-factor authentication methods with simple API calls.
             </h3>
 
-            <div class="code-demo">
-              <pre class="code-example">
-curl -X 'POST' \
-  -H 'Authorization: Bearer tIz50saQwW7s...' \
-  -d '{
-  "googleAuthTOTPMethod": {"accountName": "displayname@example.com"}
-  }' \
-  https://api.ownmfa.com/v1/applications/.../identities</pre
-              >
-            </div>
+            <p>1. Register an identity and display the results to the user.</p>
 
             <div class="code-demo">
-              <pre class="code-example">
-curl -X 'POST' \
+              <pre class="code-example"> <code>curl -X 'POST' \
   -H 'Authorization: Bearer tIz50saQwW7s...' \
-  -d '{"passcode": "915207"}' \
-  https://api.ownmfa.com/v1/applications/.../identities/.../verify</pre
-              >
+  -d <span class="code-param">'{
+  "googleAuthTOTPMethod": {"accountName": "displayname@example.com"}
+  }'</span> \
+  <span class="code-url"><a href="https://api.ownmfa.com">https://api.ownmfa.com/</a></span>v1/applications/.../identities</code></pre>
+            </div>
+
+            <p>2. Verify a user's generated passcode.</p>
+
+            <div class="code-demo">
+              <pre class="code-example"> <code>curl -X 'POST' \
+  -H 'Authorization: Bearer tIz50saQwW7s...' \
+  -d <span class="code-param">'{"passcode": "915207"}'</span> \
+  <span class="code-url"><a href="https://api.ownmfa.com">https://api.ownmfa.com/</a></span>v1/applications/.../identities/.../verify</code></pre>
             </div>
 
             <div class="request-beta">
@@ -88,7 +87,7 @@ curl -X 'POST' \
         </div>
       </div>
 
-      <div class="features section">
+      <div class="features section" id="product">
         <h1>Features</h1>
         <div class="features-list">
           <img src="/assets/img/eye.jpg" alt="retinal scanner" />
@@ -101,40 +100,28 @@ curl -X 'POST' \
             </li>
             <li>
               <span>
-                Retain control of your user and authentication workflow. OwnMFA
-                is not an OAuth service or identity provider.</span
+                Ubiquitous communication methods, such as SMS or email, provide
+                a wide reach.</span
               >
             </li>
             <li>
+              <span> Offline support via software and hardware tokens.</span>
+            </li>
+            <li>
               <span>
-                No personally identifiable information to be kept in sync. We
-                don't store any PII, only opaque identifiers.</span
+                Secure by default. Our API prevents many insecure practices
+                before they occur.</span
               >
             </li>
             <li>
               <span>Detailed event reporting and authentication tracking.</span>
             </li>
-            <li>
-              <span>
-                No additional messaging services to integrate. We do it all,
-                including SMS and email.</span
-              >
-            </li>
+            <li><span>Blazing fast REST and gRPC APIs.</span></li>
             <li>
               <span>
                 No surprise, per-message billing. All charges are included in
                 the monthly, per-identity fee.</span
               >
-            </li>
-            <li>
-              <span>
-                Standards-compliant: No proprietary applications for users to
-                install.</span
-              >
-            </li>
-            <li><span>Blazing fast REST and gRPC APIs.</span></li>
-            <li>
-              <span>Integration so easy, it can be completed today!</span>
             </li>
           </ul>
         </div>
@@ -146,41 +133,26 @@ curl -X 'POST' \
           <ul class="promo-list">
             <li>
               <span
-                >Protect your business and your customers from credential and
-                account theft with secure, API-backed logins.</span
+                >Protect your accounts and your company from credential theft
+                with secure, API-backed logins.</span
               >
             </li>
             <li>
               <span>
-                Integrate with your signup flow or for existing users alike,
-                without a painful user experience.</span
+                Retain control of your user and authentication workflow. OwnMFA
+                is not an OAuth service or an identity provider.</span
               >
             </li>
             <li>
               <span>
-                Secure by default. Even if your developers aren't security
-                experts, our API prevents many insecure practices before they
-                can occur.</span
+                A wide variety of authentication options to support every use
+                case, with more added regularly.</span
               >
             </li>
             <li>
               <span>
-                A wide variety of
-                <a href="/features">authentication options</a> to support every
-                use case, with more added regularly.</span
-              >
-            </li>
-            <li>
-              <span>
-                Offline support via software and hardware tokens that work even
-                when SMS and voice aren't available.</span
-              >
-            </li>
-            <li>
-              <span>
-                Ubiquitous communication methods, such as SMS or email, provide
-                wide reach and are a significant step up from passwords
-                alone.</span
+                We do not store any personally identifiable information (PII),
+                only opaque identifiers.</span
               >
             </li>
             <li>
@@ -196,131 +168,45 @@ curl -X 'POST' \
         </div>
       </div>
 
+      <div class="methods section">
+        <h1>Authentication Methods</h1>
+        <div class="methods-list">
+          <img src="/assets/img/circuit.jpg" alt="glowing circuit" />
+          <ul class="promo-list">
+            <li><span>SMS one-time password (OTP)</span></li>
+            <li><span> Email one-time password (OTP)</span></li>
+            <li>
+              <span> Software token (offline counter- and time-based OTP)</span>
+            </li>
+            <li>
+              <span>Google Authenticator soft token (offline HOTP/TOTP)</span>
+            </li>
+            <li>
+              <span> Microsoft Authenticator soft token (offline TOTP)</span>
+            </li>
+            <li><span> Pushover push token</span></li>
+            <li><span> Hardware token (offline HOTP/TOTP)</span></li>
+            <li><span>Backup codes</span></li>
+            <li><span>Security questions</span></li>
+          </ul>
+        </div>
+      </div>
+
       <div class="pricing section">
         <h1>Pricing</h1>
-        <div class="pricing-table">
-          <table>
-            <thead>
-              <tr>
-                <th class="thd-noborder"></th>
-                <th>Starter</th>
-                <th>Pro</th>
-                <th>Enterprise / On-Prem</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="thd-noborder"></td>
-                <td class="td-center td-free">Free</td>
-                <td class="td-center">
-                  <span class="td-pro">$0.79</span> / identity / month
-                </td>
-                <td class="td-center td-black">
-                  <a href="mailto:info@ownmfa.com">Contact</a>
-                </td>
-              </tr>
-              <tr>
-                <td>Applications</td>
-                <td class="td-center">Unlimited</td>
-                <td class="td-center">Unlimited</td>
-                <td class="td-center">Unlimited</td>
-              </tr>
-              <tr>
-                <td>Identities</td>
-                <td class="td-center">1 - 10</td>
-                <td class="td-center">20+</td>
-                <td class="td-center">Unlimited</td>
-              </tr>
-              <tr>
-                <td>Detailed event reporting</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <th>Authentication</th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>SMS one-time password</td>
-                <td></td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>Email one-time password</td>
-                <td></td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>Software token (HOTP/TOTP)</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>Google Authenticator token</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>Microsoft Authenticator token</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>Pushover push token</td>
-                <td></td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>Hardware token (HOTP/TOTP)</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>
-                  Backup codes <sub class="pricing-sub">*Always free</sub>
-                </td>
-                <td></td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>
-                  Security questions <sub class="pricing-sub">*Always free</sub>
-                </td>
-                <td></td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <th>Support</th>
-                <th></th>
-                <th></th>
-                <th></th>
-              </tr>
-              <tr>
-                <td>Email support</td>
-                <td></td>
-                <td class="td-center td-green">✓</td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-              <tr>
-                <td>Phone support</td>
-                <td></td>
-                <td></td>
-                <td class="td-center td-green">✓</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="pricing-container">
+          <div class="pricing-left">
+            <h3>Starter</h3>
+            <div class="pricing-starter">Free</div>
+          </div>
+          <div class="pricing-right">
+            <h3>Pro</h3>
+            <div class="pricing-pro">$0.79</div>
+            <div class="pricing-interval">per identity,<br />per month</div>
+          </div>
+        </div>
+        <div class="pricing-details">
+          <a href="/pricing">See pricing details</a>
         </div>
       </div>
     </div>
