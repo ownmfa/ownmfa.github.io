@@ -220,10 +220,6 @@ body {
   box-shadow: 5px 5px 25px #404040;
 }
 
-.pricing-table table {
-  table-layout: fixed;
-}
-
 table {
   width: 100%;
   border: 0;
@@ -280,8 +276,7 @@ td {
 .pricing,
 .contact,
 .privacy,
-.terms,
-.pricing-pricing {
+.terms {
   padding-bottom: 80px;
 }
 
