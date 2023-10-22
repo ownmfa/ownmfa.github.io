@@ -60,7 +60,7 @@
             <p>1. Register an identity and display the results to the user.</p>
 
             <div class="code-demo">
-              <pre class="code-example"> <code>curl -X 'POST' \
+              <pre class="code-example"> <code>curl -X POST \
   -H 'Authorization: Bearer tIz50saQwW7s...' \
   -d <span class="code-param">'{
   "googleAuthTOTPMethod": {"accountName": "displayname@example.com"}
@@ -71,7 +71,7 @@
             <p>2. Verify a user's generated passcode.</p>
 
             <div class="code-demo">
-              <pre class="code-example"> <code>curl -X 'POST' \
+              <pre class="code-example"> <code>curl -X POST \
   -H 'Authorization: Bearer tIz50saQwW7s...' \
   -d <span class="code-param">'{"passcode": "380074"}'</span> \
   <span class="code-url"><a href="https://api.ownmfa.com">https://api.ownmfa.com/</a></span>v1/applications/.../identities/.../verify</code></pre>
@@ -225,7 +225,7 @@
         </div>
 
         <div class="copyright">
-          <p>Copyright 2022 RCE Software, LLC. All rights reserved.</p>
+          <p>Copyright 2023 RCE Software, LLC. All rights reserved.</p>
         </div>
       </div>
     </footer>
