@@ -104,6 +104,12 @@ dist
 # TernJS port file
 .tern-port
 
+# Editor/IDE, AI not welcome
+.idea/
+.vscode/
+.claude/
+CLAUDE.md
+
 ### macOS ###
 .DS_Store
 
