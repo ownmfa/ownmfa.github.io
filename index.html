@@ -1,233 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>MFA / 2FA as a Service | OwnMFA</title>
-    <meta
-      name="description"
-      content="Add Multi-Factor Authentication to any product without giving up control of your accounts or authentication. OwnMFA APIs make it easy to integrate MFA and 2FA authentication methods quickly."
-    />
-    <meta
-      name="keywords"
-      content="MFA, 2FA, multi-factor authentication, two-factor authentication, API, API as a Service, SMS, Email, HOTP, TOTP, Google Authenticator"
-    />
-    <link rel="stylesheet" href="/assets/css/base.css" />
-    <link rel="shortcut icon" href="/assets/img/favicon.png" />
-  </head>
-  <body>
-    <div class="navbar">
-      <div class="navbar-inner">
-        <a href="/#">
-          <img class="logo" src="/assets/img/ownmfa.png" alt="OwnMFA" />
-        </a>
 
-        <ul class="nav">
-          <li><a href="/#product">Product</a></li>
-          <li><a href="/pricing/">Pricing</a></li>
-          <li><a href="https://archive.today/tZxRu">Docs</a></li>
-          <li><a href="https://ownmfa.freshstatus.io/">Status</a></li>
-          <li><a href="/about/">About Us</a></li>
-          <li>
-            <a href="https://github.com/ownmfa"
-              ><img src="/assets/img/github.png" alt="GitHub"
-            /></a>
-          </li>
-          <li class="signup">
-            <a href="mailto:signup@ownmfa.com?subject=Sign%20up%20for%20OwnMFA"
-              >Sign up</a
-            >
-          </li>
+<head>
+  <meta charset="utf-8" />
+  <title>MFA / 2FA as a Service | OwnMFA</title>
+  <meta name="description"
+    content="Add Multi-Factor Authentication to any product without giving up control of your accounts or authentication. OwnMFA APIs make it easy to integrate MFA and 2FA authentication methods quickly." />
+  <meta name="keywords"
+    content="MFA, 2FA, multi-factor authentication, two-factor authentication, API, API as a Service, SMS, Email, HOTP, TOTP, Google Authenticator" />
+  <link rel="stylesheet" href="/assets/css/base.css" />
+  <link rel="shortcut icon" href="/assets/img/favicon.png" />
+</head>
+
+<body>
+  <div class="navbar">
+    <div class="navbar-inner"> <a href="/#"> <img class="logo" src="/assets/img/ownmfa.png" alt="OwnMFA" /> </a>
+      <ul class="nav">
+        <li><a href="/#product">Product</a></li>
+        <li><a href="/pricing/">Pricing</a></li>
+        <li><a href="https://archive.today/tZxRu">Docs</a></li>
+        <li><a href="https://ownmfa.freshstatus.io/">Status</a></li>
+        <li><a href="/about/">About Us</a></li>
+        <li> <a href="https://github.com/ownmfa"><img src="/assets/img/github.png" alt="GitHub" /></a> </li>
+        <li class="signup"> <a href="mailto:signup@ownmfa.com?subject=Sign%20up%20for%20OwnMFA">Sign up</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <div class="lead">
+      <div class="lead-inner">
+        <h1> Add Multi-Factor Authentication to any product without giving up control of your accounts or authentication
+        </h1>
+      </div>
+      <div class="demo">
+        <div class="demo-left">
+          <h3> OwnMFA makes it easy to support complex multi-factor and two-factor authentication methods with simple
+            API calls. </h3>
+          <p>1. Register an identity and display the results to the user.</p>
+          <div class="code-demo">
+            <pre
+              class="code-example"> <code>curl -X POST \ -H 'Authorization: Bearer tIz50saQwW7s...' \ -d <span class="code-param">'{ "googleAuthTOTPMethod": {"accountName": "displayname@example.com"} }'</span> \ <span class="code-url"><a href="https://archive.today/tZxRu">https://api.ownmfa.com/</a></span>v1/applications/.../identities</code></pre>
+          </div>
+          <p>2. Verify a user's generated passcode.</p>
+          <div class="code-demo">
+            <pre
+              class="code-example"> <code>curl -X POST \ -H 'Authorization: Bearer tIz50saQwW7s...' \ -d <span class="code-param">'{"passcode": "380074"}'</span> \ <span class="code-url"><a href="https://archive.today/tZxRu">https://api.ownmfa.com/</a></span>v1/applications/.../identities/.../verify</code></pre>
+          </div>
+          <div class="signup-btn"> <a href="mailto:signup@ownmfa.com?subject=Sign%20up%20for%20OwnMFA">Sign up for
+              OwnMFA</a> </div>
+        </div>
+      </div>
+    </div>
+    <div class="features section" id="product">
+      <h1>Features</h1>
+      <div class="features-list"> <img src="/assets/img/eye.jpg" alt="retinal scanner" />
+        <ul class="promo-list">
+          <li> <span>Easily add support for MFA / 2FA to your product with simple API calls.</span> </li>
+          <li> <span> Ubiquitous communication methods, such as SMS or email, provide a wide reach.</span> </li>
+          <li> <span> Offline support via software and hardware tokens.</span> </li>
+          <li> <span> Secure by default. Our API prevents many insecure practices before they occur.</span> </li>
+          <li> <span>Detailed event reporting and authentication tracking.</span> </li>
+          <li><span>Blazing fast REST and gRPC APIs.</span></li>
+          <li> <span> No surprise, per-message billing. All charges are included in the monthly, per-identity
+              fee.</span> </li>
         </ul>
       </div>
     </div>
-
-    <div class="content">
-      <div class="lead">
-        <div class="lead-inner">
-          <h1>
-            Add Multi-Factor Authentication to any product without giving up
-            control of your accounts or authentication
-          </h1>
-        </div>
-
-        <div class="demo">
-          <div class="demo-left">
-            <h3>
-              OwnMFA makes it easy to support complex multi-factor and
-              two-factor authentication methods with simple API calls.
-            </h3>
-
-            <p>1. Register an identity and display the results to the user.</p>
-
-            <div class="code-demo">
-              <pre class="code-example"> <code>curl -X POST \
-  -H 'Authorization: Bearer tIz50saQwW7s...' \
-  -d <span class="code-param">'{
-  "googleAuthTOTPMethod": {"accountName": "displayname@example.com"}
-  }'</span> \
-  <span class="code-url"><a href="https://archive.today/tZxRu">https://api.ownmfa.com/</a></span>v1/applications/.../identities</code></pre>
-            </div>
-
-            <p>2. Verify a user's generated passcode.</p>
-
-            <div class="code-demo">
-              <pre class="code-example"> <code>curl -X POST \
-  -H 'Authorization: Bearer tIz50saQwW7s...' \
-  -d <span class="code-param">'{"passcode": "380074"}'</span> \
-  <span class="code-url"><a href="https://archive.today/tZxRu">https://api.ownmfa.com/</a></span>v1/applications/.../identities/.../verify</code></pre>
-            </div>
-
-            <div class="signup-btn">
-              <a
-                href="mailto:signup@ownmfa.com?subject=Sign%20up%20for%20OwnMFA"
-                >Sign up for OwnMFA</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="features section" id="product">
-        <h1>Features</h1>
-        <div class="features-list">
-          <img src="/assets/img/eye.jpg" alt="retinal scanner" />
-          <ul class="promo-list">
-            <li>
-              <span
-                >Easily add support for MFA / 2FA to your product with simple
-                API calls.</span
-              >
-            </li>
-            <li>
-              <span>
-                Ubiquitous communication methods, such as SMS or email, provide
-                a wide reach.</span
-              >
-            </li>
-            <li>
-              <span> Offline support via software and hardware tokens.</span>
-            </li>
-            <li>
-              <span>
-                Secure by default. Our API prevents many insecure practices
-                before they occur.</span
-              >
-            </li>
-            <li>
-              <span>Detailed event reporting and authentication tracking.</span>
-            </li>
-            <li><span>Blazing fast REST and gRPC APIs.</span></li>
-            <li>
-              <span>
-                No surprise, per-message billing. All charges are included in
-                the monthly, per-identity fee.</span
-              >
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="benefits section">
-        <h1>Benefits</h1>
-        <div class="benefits-list">
-          <ul class="promo-list">
-            <li>
-              <span
-                >Protect your accounts and your company from credential theft
-                with secure, API-backed logins.</span
-              >
-            </li>
-            <li>
-              <span>
-                Retain control of your user and authentication workflow. OwnMFA
-                is not an OAuth service or an identity provider.</span
-              >
-            </li>
-            <li>
-              <span>
-                A wide variety of authentication options to support every use
-                case, with more added regularly.</span
-              >
-            </li>
-            <li>
-              <span>
-                We do not store any personally identifiable information (PII),
-                only opaque identifiers.</span
-              >
-            </li>
-            <li>
-              <span
-                >Enterprise and on-premise deployment options available.</span
-              >
-            </li>
-            <li>
-              <span>We are an Austin-based company with US-based support.</span>
-            </li>
-          </ul>
-          <img src="/assets/img/vault.jpg" alt="vault" />
-        </div>
-      </div>
-
-      <div class="methods section">
-        <h1>Authentication Methods</h1>
-        <div class="methods-list">
-          <img src="/assets/img/circuit.jpg" alt="glowing circuit" />
-          <ul class="promo-list">
-            <li>
-              <span> Software token (offline counter- and time-based OTP)</span>
-            </li>
-            <li>
-              <span>Google Authenticator soft token (offline HOTP/TOTP)</span>
-            </li>
-            <li>
-              <span
-                >Apple iOS 15+ and Microsoft Authenticator soft tokens (offline
-                TOTP)</span
-              >
-            </li>
-            <li><span>SMS one-time password (OTP)</span></li>
-            <li><span> Email one-time password (OTP)</span></li>
-            <li><span> Pushover push token</span></li>
-            <li><span> Hardware token (offline HOTP/TOTP)</span></li>
-            <li><span>Backup codes</span></li>
-            <li><span>Security questions</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing section">
-        <h1>Pricing</h1>
-        <div class="pricing-container">
-          <div class="pricing-left">
-            <h3>Starter</h3>
-            <div class="pricing-starter">Free</div>
-          </div>
-          <div class="pricing-right">
-            <h3>Pro</h3>
-            <div class="pricing-pro">$0.79</div>
-            <div class="pricing-interval">per identity,<br />per month</div>
-          </div>
-        </div>
-        <div class="pricing-details">
-          <a href="/pricing/">See pricing details</a>
-        </div>
+    <div class="benefits section">
+      <h1>Benefits</h1>
+      <div class="benefits-list">
+        <ul class="promo-list">
+          <li> <span>Protect your accounts and your company from credential theft with secure, API-backed logins.</span>
+          </li>
+          <li> <span> Retain control of your user and authentication workflow. OwnMFA is not an OAuth service or an
+              identity provider.</span> </li>
+          <li> <span> A wide variety of authentication options to support every use case, with more added
+              regularly.</span> </li>
+          <li> <span> We do not store any personally identifiable information (PII), only opaque identifiers.</span>
+          </li>
+          <li> <span>Enterprise and on-premise deployment options available.</span> </li>
+          <li> <span>We are an Austin-based company with US-based support.</span> </li>
+        </ul> <img src="/assets/img/vault.jpg" alt="vault" />
       </div>
     </div>
-
-    <footer>
-      <div class="footer-container">
-        <div class="policies">
-          <ul class="nav">
-            <li><a href="/privacy/">Privacy Policy</a></li>
-            <li><a href="/terms/">Terms of Service</a></li>
-            <li><a href="https://archive.today/tZxRu">API Documentation</a></li>
-          </ul>
+    <div class="methods section">
+      <h1>Authentication Methods</h1>
+      <div class="methods-list"> <img src="/assets/img/circuit.jpg" alt="glowing circuit" />
+        <ul class="promo-list">
+          <li> <span> Software token (offline counter- and time-based OTP)</span> </li>
+          <li> <span>Google Authenticator soft token (offline HOTP/TOTP)</span> </li>
+          <li> <span>Apple iOS 15+ and Microsoft Authenticator soft tokens (offline TOTP)</span> </li>
+          <li><span>SMS one-time password (OTP)</span></li>
+          <li><span> Email one-time password (OTP)</span></li>
+          <li><span> Pushover push token</span></li>
+          <li><span> Hardware token (offline HOTP/TOTP)</span></li>
+          <li><span>Backup codes</span></li>
+          <li><span>Security questions</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pricing section">
+      <h1>Pricing</h1>
+      <div class="pricing-container">
+        <div class="pricing-left">
+          <h3>Starter</h3>
+          <div class="pricing-starter">Free</div>
         </div>
-
-        <div class="copyright">
-          <p>Copyright 2025 RCE Software, LLC. All rights reserved.</p>
+        <div class="pricing-right">
+          <h3>Pro</h3>
+          <div class="pricing-pro">$0.79</div>
+          <div class="pricing-interval">per identity,<br />per month</div>
         </div>
       </div>
-    </footer>
-  </body>
+      <div class="pricing-details"> <a href="/pricing/">See pricing details</a> </div>
+    </div>
+  </div>
+  <footer>
+    <div class="footer-container">
+      <div class="policies">
+        <ul class="nav">
+          <li><a href="/privacy/">Privacy Policy</a></li>
+          <li><a href="/terms/">Terms of Service</a></li>
+          <li><a href="https://archive.today/tZxRu">API Documentation</a></li>
+        </ul>
+      </div>
+      <div class="copyright">
+        <p>Copyright 2025 RCE Software, LLC. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
